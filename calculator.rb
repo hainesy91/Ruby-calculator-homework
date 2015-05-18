@@ -38,7 +38,6 @@ if response == 'basic'
     operator = first_number / second_number
     puts "The answer is #{operator}"
   end
-
 else response == 'advanced'
   puts "What would you like to calculate? [square] root, [power] of, [mortgage] or [bmi]"
   operation = gets.chomp.downcase
@@ -58,33 +57,4 @@ else response == 'advanced'
       operator = first_number ** second_number
       puts "The answer is #{operator}"
     end
-
-  elsif 'mortgage'
-    puts "What is your loan amount (in pounds - )?"
-    principal = gets.to_i
-    puts "How long would you like the loan for? (in months)?"
-    term = gets.to_i
-    puts "What interest rate are you borrowing at?"
-    interest_rate = gets.to_i
-    operator = principal * (interest_rate * (1 + interest_rate) ** term) / ((1*interes))
-      
-    end
-
-  elsif 'bmi'
-    puts "Imperial or Metric?"
-    measurement = gets.chomp
-    if measurement == 'imperial'
-    puts "What is your weight in pounds?"
-    weight = gets.chomp.to_j
-    puts "What is your height in inches?"
-    height = gets.chomp.to_j
-    puts((weight/(height**2))*703).to_j
-  elsif measurement == 'metric'
-    puts "What is your weight in kg?"
-    weight = gets.chomp.to_j
-    puts "What is your height in metres?"
-    height = gets.chomp.to_j
-    puts weight/(height**2)
-  else
-    print 'There is an issue'
   end
