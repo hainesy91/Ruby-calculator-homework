@@ -56,5 +56,24 @@ else response == 'advanced'
       second_number = gets.chomp.to_i
       operator = first_number ** second_number
       puts "The answer is #{operator}"
+    
+    when 'bmi'
+      puts 'Imperial or Metric?'
+    measurement = gets.chomp
+    if measurement == 'imperial'
+    puts 'What is your weight in lbs?'
+    weight = gets.chomp.to_f
+    puts 'What is your height in inches? '
+    height = gets.chomp.to_f
+    puts ((weight/(height**2))*703).to_f
+    elsif measurement == 'metric'
+    puts 'What is your weight in kg?'
+    weight = gets.chomp.to_f
+    puts 'What is your height in m?'
+    height = gets.chomp.to_f
+    puts weight/(height**2)
+    else
+    print 'Error'
     end
   end
+end
