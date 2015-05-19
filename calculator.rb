@@ -72,8 +72,18 @@ else response == 'advanced'
     puts 'What is your height in m?'
     height = gets.chomp.to_f
     puts weight/(height**2)
-    else
+    elsif
     print 'Error'
+
+    else 'mortgage'
+    puts "What is your loan amount (£)?"
+    principal = gets.to_i
+    puts "How long would you like the loan to last (Term in months)?"
+    term = gets.to_i
+    puts "What interest rate are you borrowing at?"
+    interest_rate = Float(gets.chomp)
+    operator = principal * (interest_rate * (1 + interest_rate) ** term) / ((1*interest_rate)** term - 1) / 100.0
+    puts "Your monthly payment is #{operator.round(2)}"
     end
   end
 end
